@@ -1,8 +1,8 @@
 {
   "name": "cypress-automationexercise",
   "version": "1.0.0",
-  "description": "practica lo aprendido cypress y reporte allure 2023",
-  "main": "index.js",
+  "description": "",
+  "main": "cypress.config.js",
   "scripts": {
     "generar-reporte": " allure generate allure-results -o allure-report --clean",
     "abrir-reporte": "allure open",
@@ -14,15 +14,16 @@
     "chromeWebSecurity": "false",
     "testFiles": "**/*.cy.js"
   },
-  "keywords": [],
-  "author": "Misael",
+  "author": "",
   "license": "ISC",
   "devDependencies": {
     "@shelex/cypress-allure-plugin": "^2.40.0",
     "cypress": "^12.13.0",
-    "cypress-parallel": "^0.13.0"
+    "i": "^0.3.7",
+    "npm": "^9.8.1"
   },
   "dependencies": {
-    "allure-commandline": "^2.23.1"
+    "allure-commandline": "^2.23.1",
+    "chai": "^4.3.7"
   }
 }

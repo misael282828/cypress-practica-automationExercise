@@ -1,15 +1,32 @@
+import { should } from "chai";
+import { MetodosComunes } from "../util/metodosComunes";
+
+const user = MetodosComunes.generarString(9)
+const email = MetodosComunes.generateRandomEmail()
 describe('Register user', () => {
+
   it('valid register', () => {
     // 1. Launch browser
     // 2. Navigate to url 'http://automationexercise.com'
     cy.visit('https://www.automationexercise.com/')
     // 3. Verify that home page is visible successfully
-    // cy.get('p.pull-left').should('have.text', 'Copyright © 2021 All rights reserved')
+    cy.url().should('eq', 'https://www.automationexercise.com/')
+
     // 4. Click on 'Signup / Login' button
-    // cy.get('i.fa.fa-lock').click()
+    // cy.get('a').should('have.text', ' Signup / Login').click()
+    cy.contains('a', 'Signup / Login').click();
+
     // 5. Verify 'New User Signup!' is visible
+    cy.contains('h2', 'New User Signup!').click();
+
+
     // 6. Enter name and email address
+    cy.get('[data-qa="signup-name"]').type(user)
+    cy.get('[data-qa="signup-email"]').type(email)
     // 7. Click 'Signup' button
+    cy.get('[data-qa="signup-button"]').click()
+    
+
     // 8. Verify that 'ENTER ACCOUNT INFORMATION' is visible
     // 9. Fill details: Title, Name, Email, Password, Date of birth
     // 10. Select checkbox 'Sign up for our newsletter!'
@@ -23,6 +40,6 @@ describe('Register user', () => {
     // 18. Verify that 'ACCOUNT DELETED!' is visible and click 'Continue' button
 
 
-   
+
   })
 });

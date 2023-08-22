@@ -1,46 +1,6 @@
-node_modules
 
-# Archivos y carpetas generados por el sistema
-.DS_Store
-Thumbs.db
-
+node_modules/*
 # Ignorar carpetas generadas por Cypress
 cypress/videos/
 cypress/screenshots/
 
-
-# Archivos de configuración
-.env
-.env.local
-.env.development
-.env.test
-.env.production
-
-# Carpeta de dependencias (Node.js)
-node_modules/
-
-# Carpeta de construcción
-build/
-dist/
-out/
-public/
-
-# Archivos de compilación
-*.log
-*.bak
-*.tmp
-*.swp
-
-# Archivos de caché
-.cache/
-*.cache
-*.sqlite
-
-# Archivos de respaldo
-*~
-*.bak
-*.backup
-
-# Carpeta de entorno virtual (Python)
-venv/
-env/

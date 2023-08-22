@@ -1,7 +1,7 @@
 
    npm install cypress@12.13.0 --save-dev
    npm install allure-commandline --save-dev
-   npm install -g cypress-parallel
+   npm install cypress-parallel --save-dev
    npm install @shelex/cypress-allure-plugin --save-dev
   
 
