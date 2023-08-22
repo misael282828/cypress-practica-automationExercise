@@ -1,0 +1,28 @@
+{
+  "name": "cypress-automationexercise",
+  "version": "1.0.0",
+  "description": "practica lo aprendido cypress y reporte allure 2023",
+  "main": "index.js",
+  "scripts": {
+    "generar-reporte": " allure generate allure-results -o allure-report --clean",
+    "abrir-reporte": "allure open",
+    "ejecutar-pruebas": "npx cypress@12.13.0 run --env allure=true",
+    "limpiar-reporte": "rimraf ./allure-report && rimraf ./allure-results",
+    "test": "npm run limpiar-reporte && npm run ejecutar-pruebas & npm run generar-reporte && npm run abrir-reporte ",
+    "cy:parallel": "npm run limpiar-reporte && cypress-parallel -s ejecutar-pruebas -t 3 -d ./cypress/e2e/tests -a & npm run generar-reporte",
+    "open": "npm run cypress --browser chrome --headed",
+    "chromeWebSecurity": "false",
+    "testFiles": "**/*.cy.js"
+  },
+  "keywords": [],
+  "author": "Misael",
+  "license": "ISC",
+  "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.40.0",
+    "cypress": "^12.13.0",
+    "cypress-parallel": "^0.13.0"
+  },
+  "dependencies": {
+    "allure-commandline": "^2.23.1"
+  }
+}
