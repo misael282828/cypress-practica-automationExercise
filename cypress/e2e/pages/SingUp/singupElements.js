@@ -105,6 +105,13 @@ export class singupElements {
     }
   }
 
+  static get headers(){
+    return {
+      get getH2(){
+        return cy.contains('b', 'Account Created!')
+      }
+    }
+  }
 
 
 

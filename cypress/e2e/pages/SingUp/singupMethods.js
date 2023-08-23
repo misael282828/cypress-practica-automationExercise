@@ -1,3 +1,4 @@
+import { elementosComunes } from "../../../util/elementosComunes";
 import { singupElements } from "./singupElements";
 
 export class singupMethods{
@@ -10,7 +11,8 @@ export class singupMethods{
     city: 'Cityville',
     zipCode: '12345',
     phoneNumber: '555-123-4567',
-    state: 'CA'
+    state: 'CA',
+    country: 3
   };
 
   //ENTER ACCOUNT INFORMATION
@@ -31,6 +33,12 @@ export class singupMethods{
   static clickReceivEspecial(){
     singupElements.checkboxes.checkReceivEspecial.click()
   }
+
+  static clickCreateAccount(){
+    singupElements.buttons.createAccount.click()
+  }
+
+
 
   static fillNameField(name){
     singupElements.inputs.inputName.type(name)
@@ -96,11 +104,8 @@ export class singupMethods{
     
   }
 
-  static clickCreateAccount(){
-    singupElements.buttons.createAccount.click()
-  }
-
   static fillFormWithStaticData() {
+    
     this.fillFistNameField(this.staticData.firstName);
     this.fillLastNameField(this.staticData.lastName);
     this.fillCompanyField(this.staticData.company);
@@ -109,6 +114,7 @@ export class singupMethods{
     this.zipCodeField(this.staticData.zipCode);
     this.mobileNumberField(this.staticData.phoneNumber);
     this.fillState(this.staticData.state);
+    this.clickCountry(this.staticData.country)
   }
 
   

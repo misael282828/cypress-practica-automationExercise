@@ -23,4 +23,5 @@
     "allure-commandline": "^2.23.1",
     "chai": "^4.3.7"
   }
+  
 }
