@@ -11,16 +11,13 @@
     "test": "npm run limpiar-reporte && npm run ejecutar-pruebas & npm run generar-reporte && npm run abrir-reporte ",
     "cy:parallel": "npm run limpiar-reporte && cypress-parallel -s ejecutar-pruebas -t 3 -d ./cypress/e2e/tests -a & npm run generar-reporte",
     "open": "npm run cypress --browser chrome --headed",
-    "chromeWebSecurity": "false",
     "testFiles": "**/*.cy.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@shelex/cypress-allure-plugin": "^2.40.0",
-    "cypress": "^12.13.0",
-    "i": "^0.3.7",
-    "npm": "^9.8.1"
+    "cypress": "^12.13.0"
   },
   "dependencies": {
     "allure-commandline": "^2.23.1",
