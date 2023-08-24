@@ -1,20 +1,17 @@
-stages {
-    stage('Install Dependencies') {
-        steps {
-            sh 'npm install'
+pipeline {
+    agent any // O el agente que quieras usar
+    
+    stages {
+        stage('Install Dependencies') {
+            steps {
+                sh 'npm install'
+            }
+        }
+        
+        stage('Run Cypress Tests') {
+            steps {
+                sh 'npx cypress run' // Comando para ejecutar pruebas Cypress
+            }
         }
     }
-    
-    stage('Run Tests') {
-        steps {
-            sh 'npm run test' // Esta línea ejecutará las pruebas de Cypress
-        }
-    }
-    
-    // stage('Generate and Open Allure Report') {
-    //     steps {
-    //         sh 'npx allure generate --clean'
-    //         sh 'npx allure open'
-    //     }
-    // }
 }
