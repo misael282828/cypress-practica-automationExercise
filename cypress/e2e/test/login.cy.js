@@ -36,7 +36,6 @@ describe('User Login', () => {
   });
 
   it('Login User with incorrect email and password ', () => {
-
     // 1. Launch browser
     // 2. Navigate to url 'http://automationexercise.com'
     cy.visit('https://www.automationexercise.com/')
@@ -45,14 +44,12 @@ describe('User Login', () => {
     // 4. Click on 'Signup / Login' button
     //Home,Products,Cart,Logout,Delete Account, login
     MetodosComunes.clickLinkText('login')
-
     // 5. Verify 'Login to your account' is visible
     MetodosComunes.elementVisible('Login to your account')
     // 6. Enter correct email address and password
     // 7. Click 'login' button
     singupMethods.completedLogin('pepitoasd828@gmail.com','123123')
     // 8. Verify that 'Logged in as username' is visible
-  
     //Verify error 'Your email or password is incorrect!' is visible
     MetodosComunes.elementVisible('Your email or password is incorrect!')
     
