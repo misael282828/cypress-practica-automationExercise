@@ -1,16 +1,16 @@
 pipeline {
-    agent any // O el agente que quieras usar
+    agent any
     
     stages {
         stage('Install Dependencies') {
             steps {
-                sh 'npm install'
+                bat 'npm install'
             }
         }
         
         stage('Run Cypress Tests') {
             steps {
-                sh 'npx cypress run' // Comando para ejecutar pruebas Cypress
+                bat 'npx cypress run' // Comando para ejecutar pruebas Cypress
             }
         }
     }
