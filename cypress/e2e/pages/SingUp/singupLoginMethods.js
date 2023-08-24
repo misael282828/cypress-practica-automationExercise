@@ -1,5 +1,5 @@
 import { elementosComunes } from "../../../util/elementosComunes";
-import { singupElements } from "./singupElements";
+import { singupElements } from "./singupLoginElements";
 
 export class singupMethods{
 
@@ -14,6 +14,16 @@ export class singupMethods{
     state: 'CA',
     country: 3
   };
+
+  // Login to your account
+  static completedLogin(email,pass){
+    singupElements.inputs.inputLoginEmail.invoke('val',email)
+    singupElements.inputs.inputPasswordLogin.type(pass)
+    singupElements.buttons.btnLogin.click()
+  }
+
+
+
 
   //ENTER ACCOUNT INFORMATION
   static selectGender(gender){

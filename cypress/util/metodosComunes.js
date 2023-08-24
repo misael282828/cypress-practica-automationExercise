@@ -46,8 +46,7 @@ export class MetodosComunes {
   }
 
   static validateLoggedInUserText(textoEsperado) {
-    elementosComunes.links.loggedInAs
-      .should('be.visible')
+    elementosComunes.links.loggedInAs.should('be.visible')
       .invoke('text')
       .then((texto) => {
         if (texto.trim() === textoEsperado) {
@@ -60,7 +59,7 @@ export class MetodosComunes {
 
   static clickLinkText(textLink) {
     switch (textLink) {
-      case 'Home': 
+      case 'Home':
         elementosComunes.links.homeLink.click();
         break;
       case 'Products':
@@ -75,15 +74,15 @@ export class MetodosComunes {
       case 'Delete Account':
         elementosComunes.links.deleteAccountLink.click();
         break;
-      // Add more cases as needed
-
-      default:
-        cy.log('No action defined for the given text.');
+      case 'login':
+        elementosComunes.links.signupLogin.click();
+        break;
+      default: cy.log('No action defined for the given text.');
     }
   }
 
 
-  static validateUrlText(url){
+  static validateUrlText(url) {
     cy.url().should('eq', url)
 
   }

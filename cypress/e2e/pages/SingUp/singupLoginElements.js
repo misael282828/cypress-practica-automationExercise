@@ -34,7 +34,6 @@ export class singupElements {
         return cy.get('input[data-qa="last_name"]')
       },
 
-
       get inputCompany() {
         return cy.get('input[data-qa="company"]')
       },
@@ -55,7 +54,20 @@ export class singupElements {
 
       get inputMobileNunber() {
         return cy.get('input[data-qa="mobile_number"]')
+      },
+
+
+      // Login to your account
+      get inputLoginEmail(){
+        return cy.get('input[data-qa="login-email"]')
+      },
+      get inputPasswordLogin(){
+        return cy.get('input[data-qa="login-password"]')
       }
+
+
+
+
 
 
     }
@@ -101,6 +113,9 @@ export class singupElements {
       },
       get scrollUp() {
         return cy.get('i.fa-arrow-circle-o-right')
+      },
+      get btnLogin(){
+        return cy.get('button[data-qa="login-button"]')
       }
     }
   }

@@ -21,7 +21,12 @@ export class elementosComunes{
       get deleteAccountLink(){
         return cy.get('a[href="/delete_account"]')
       },
+      get signupLogin(){
+        return cy.get('a[href="/login"]')
+      }
       
     }
   }
 }
+
+
