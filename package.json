@@ -8,7 +8,7 @@
     "abrir-reporte": "allure open",
     "ejecutar-pruebas": "npx cypress@12.13.0  run --headed --browser chrome --env allure=true",
     "limpiar-reporte": "rimraf ./allure-report && rimraf ./allure-results",
-    "test": "npm run limpiar-reporte && npm run ejecutar-pruebas & npm run generar-reporte && npm run abrir-reporte ",
+    "test": "npm run limpiar-reporte && npm run ejecutar-pruebas & npm run generar-reporte ",
     "cy:parallel": "npm run limpiar-reporte && cypress-parallel -s ejecutar-pruebas -t 3 -d ./cypress/e2e/tests -a & npm run generar-reporte",
     "open": "npm run cypress --browser chrome --headed",
     "testFiles": "**/*.cy.js"
